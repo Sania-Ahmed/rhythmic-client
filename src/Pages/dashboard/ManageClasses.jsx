@@ -2,11 +2,37 @@ import useClass from "../../hooks/useClass";
 
 
 const ManageClasses = () => {
-    const [Allclasses, isLoading] = useClass([]) ;
+    const [Allclasses, isLoading, refetch] = useClass([]) ;
     
    const manageClass = Allclasses.filter(item => (item.status));
 
    console.log(manageClass)
+
+  const handleAprove = (item) => {
+    fetch(`http://localhost:5000/approvedClass/${item._id}`, {
+        method: 'PATCH',
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.modifiedCount){
+            refetch();
+            alert('updated')
+        }
+    })
+  }
+  const handleDeny = (item) => {
+    fetch(`http://localhost:5000/deniedClass/${item._id}`, {
+        method: 'PATCH',
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.modifiedCount){
+            refetch();
+            alert('updated')
+        }
+    })
+  }
+
     return (
         <div className="w-full">
             <div className="overflow-x-auto w-[100%]">
@@ -51,8 +77,8 @@ const ManageClasses = () => {
              <p>{item?.email}</p>
             </td>
             <td className="flex flex-col gap-1">
-             <button  className="btn btn-xs btn-success">APROVE</button>
-             <button  className="btn btn-xs btn-error">DENY</button>
+             <button onClick={() => handleAprove(item)}  className="btn btn-xs btn-success">APROVE</button>
+             <button onClick={() => handleDeny(item)} className="btn btn-xs btn-error">DENY</button>
              <button  className="btn btn-xs btn-primary">Send Feedback</button>
             </td>
           </tr>)
