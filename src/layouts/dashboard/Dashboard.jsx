@@ -27,7 +27,7 @@ const [isInstructor] = useInstructor() ;
             <li><Link to={""}>Feedback</Link></li>
             <div className="divider"></div> 
               </> : (isInstructor?.instructor ? <>
-              <li><Link to={""}>Add Class</Link></li>
+              <li><Link to={"/dashboard/addClass"}>Add Class</Link></li>
             <li><Link to={""}>My classes</Link></li>
             <div className="divider"></div> 
               </> : <>
