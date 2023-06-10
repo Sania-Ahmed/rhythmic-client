@@ -11,7 +11,7 @@ const AddClass = () => {
 
     const onSubmit = data => {
 
-       console.log(data) ;
+      
        const {name, image , price , available_seats, } = data ;
        const newClass = {
         name,
@@ -20,8 +20,11 @@ const AddClass = () => {
         available_seats,
         status : 'pending',
         feedback: 0,
-        students: 0
+        students: 0,
+        email : user?.email ,
+        instructor: user?.displayName
        }
+       console.log(newClass) ;
        axiosSecure.post('/class', newClass) 
        .then( data => {
            if(data.insertedId){

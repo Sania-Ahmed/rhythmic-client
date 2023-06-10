@@ -28,7 +28,7 @@ const [isInstructor] = useInstructor() ;
             <div className="divider"></div> 
               </> : (isInstructor?.instructor ? <>
               <li><Link to={"/dashboard/addClass"}>Add Class</Link></li>
-            <li><Link to={""}>My classes</Link></li>
+            <li><Link to={"/dashboard/myAddedClass"}>My classes</Link></li>
             <div className="divider"></div> 
               </> : <>
               <li><Link to={"/dashboard/myList"}>My Classes</Link></li>
