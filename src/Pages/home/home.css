@@ -1,0 +1,12 @@
+.bg{
+    background-image: url('https://img.freepik.com/free-vector/music-notes-stave-staff_1284-44373.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    
+}
+.overlay{
+    background-color: black;
+    opacity: 0.5;
+}

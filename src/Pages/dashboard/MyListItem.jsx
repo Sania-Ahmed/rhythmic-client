@@ -1,0 +1,48 @@
+/* eslint-disable react/prop-types */
+
+
+// eslint-disable-next-line no-unused-vars
+const MyListItem = ({item}) => {
+    const handleDelete = (id) => {
+        const process = confirm('are you sure you want to delete? ') ;
+        if(process) {
+            fetch(`http://localhost:5000/lists/${id}`, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then( data => {
+                if(data.deletedCount > 0) {
+                    alert('deleted successfully') 
+                }
+            })
+        }
+    }
+    return (
+        <tr>
+        <th>
+        </th>
+        <td>
+          <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={item.image} alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">{item.name}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          {item?.instructor}
+        </td>
+        <td>${item?.price}</td>
+        <th>
+          <button onClick={() => handleDelete(item._id)} className="btn btn-ghost btn-xs">delete</button>
+          <button className="btn btn-ghost btn-xs">pay</button>
+        </th>
+      </tr>
+    );
+};
+
+export default MyListItem;

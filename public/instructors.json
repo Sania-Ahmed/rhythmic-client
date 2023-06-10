@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "abc123",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "image": "https://img.freepik.com/free-photo/teacher-brunette-instructor-with-computer-suit-whiteboard-classroom-crossing-hands_140725-163245.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  },
+  {
+    "_id": "def456",
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "image": "https://img.freepik.com/free-photo/teacher-smart-instructor-grey-suit-classroom-with-computer-whiteboard-explaining-math_140725-163363.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  },
+  {
+    "_id": "ghi789",
+    "name": "David Johnson",
+    "email": "davidjohnson@example.com",
+    "image": "https://img.freepik.com/free-photo/teacher-smart-instructor-grey-suit-classroom-with-computer-whiteboard-explaining-math_140725-163363.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  },
+  {
+    "_id": "jkl012",
+    "name": "Emily Davis",
+    "email": "emilydavis@example.com",
+    "image": "https://img.freepik.com/free-photo/portrait-female-teacher-holding-notepad-green_140725-149620.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  },
+  {
+    "_id": "mno345",
+    "name": "Michael Wilson",
+    "email": "michaelwilson@example.com",
+    "image": "https://img.freepik.com/free-photo/teacher-brunette-instructor-with-computer-suit-whiteboard-classroom-crossing-hands_140725-163245.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  },
+  {
+    "_id": "pqr678",
+    "name": "Sophia Anderson",
+    "email": "sophiaanderson@example.com",
+    "image": "https://img.freepik.com/free-photo/portrait-female-teacher-holding-notepad-green_140725-149620.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1"
+  }
+]

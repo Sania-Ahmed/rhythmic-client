@@ -1,0 +1,65 @@
+
+    [
+      {
+        "_id": "c1y9z2",
+        "image": "https://img.freepik.com/free-photo/old-wooden-guitar-isolated_144627-4374.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1",
+        "name": "Beginner's Guitar",
+        "instructor": "John Smith",
+        "students": 15,
+        "available_seats": 5,
+        "category": "popular",
+        "price": 50
+      },
+      {
+        "_id": "a4b8x6",
+        "image": "https://img.freepik.com/free-photo/guitarist-man-playing-guitar-home_144627-28083.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1",
+        "name": "Intermediate Guitar",
+        "instructor": "Jane Doe",
+        "students": 10,
+        "available_seats": 10,
+        "category": "popular",
+        "price": 60
+      },
+      {
+        "_id": "p5r3s7",
+        "image": "https://img.freepik.com/free-photo/musician-plays-acoustic-guitar_169016-3935.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=country_rows_v1",
+        "name": "Advanced Guitar",
+        "instructor": "Mike Johnson",
+        "students": 8,
+        "available_seats": 12,
+        "category": "popular",
+        "price": 70
+      },
+      {
+        "_id": "q9f2w1",
+        "image": "https://img.freepik.com/free-photo/male-musician-playing-acoustic-guitar-dark-room-copy-space_169016-10976.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1",
+        "name": "Fingerstyle Guitar",
+        "instructor": "Sarah Thompson",
+        "students": 5,
+        "available_seats": 15,
+        "category": "popular",
+        "price": 80
+      },
+      {
+        "_id": "m3h7k5",
+        "image": "https://img.freepik.com/free-photo/acoustic-guitar-chair-close-up-brown-guitar-black-wall_1150-21884.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1",
+        "name": "Acoustic Guitar Songwriting",
+        "instructor": "Robert Davis",
+        "students": 3,
+        "available_seats": 17,
+        "category": "popular",
+        "price": 90
+      },
+      {
+        "_id": "z8n6t4",
+        "image": "https://img.freepik.com/free-photo/electric-guitar-isolated-white-background_93675-131180.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=country_rows_v1",
+        "name": "Electric Guitar Techniques",
+        "instructor": "Alex Turner",
+        "students": 12,
+        "available_seats": 8,
+        "category": "popular",
+        "price": 100
+      }
+    ]
+  
+  
