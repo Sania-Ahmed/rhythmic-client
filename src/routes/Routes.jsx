@@ -14,6 +14,7 @@ import Allusers from "../Pages/dashboard/Allusers";
 import Allinstructors from "../Pages/instructors/Allinstructors";
 import AddClass from "../Pages/dashboard/AddClass";
 import MyAddedClass from "../Pages/dashboard/MyAddedClass";
+import ManageClasses from "../Pages/dashboard/ManageClasses";
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
             {
                 path:'myAddedClass',
                 element:<MyAddedClass></MyAddedClass>
+            },
+            {
+                path: 'manageClasses',
+                element: <ManageClasses></ManageClasses> 
             }
 
             

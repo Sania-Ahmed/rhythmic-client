@@ -23,8 +23,8 @@ const [isInstructor] = useInstructor() ;
           <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
             {isAdmin?.admin ?  <>
               <li><Link to={"/dashboard/users"}>All users</Link></li>
-            <li><Link to={""}>Manage classes</Link></li>
-            <li><Link to={""}>Feedback</Link></li>
+            <li><Link to={"/dashboard/manageClasses"}>Manage classes</Link></li>
+            
             <div className="divider"></div> 
               </> : (isInstructor?.instructor ? <>
               <li><Link to={"/dashboard/addClass"}>Add Class</Link></li>
