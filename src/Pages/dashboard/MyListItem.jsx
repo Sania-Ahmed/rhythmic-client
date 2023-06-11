@@ -25,7 +25,9 @@ const MyListItem = ({item}) => {
     const handleSendPrice = (price) => {
          console.log(price)
              navigate('/dashboard/pay', 
-             {state:{ price : price }}) ;
+             {state:{ price : price, 
+              item: item 
+             }}) ;
     }
     return (
         <tr>

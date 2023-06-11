@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 
-const CheckoutForm = ({price}) => {
+const CheckoutForm = ({price, item}) => {
     const {user} = useContext(AuthContext) ;
     const  stripe = useStripe() ;
     const [axiosSecure] = useAxiosSecure();
@@ -73,6 +73,26 @@ const CheckoutForm = ({price}) => {
 
         if(paymentIntent.status === 'succeeded'){
             setTransactionId(paymentIntent.id);
+            const payment = {
+                email : user?.email,
+                transactionId : paymentIntent.id,
+                itemId: item?.itemId,
+                name: item?.name,
+                students: item?.students, 
+                seats: item?.available_seats ,
+                image: item?.image,
+                instructor: item?.instructor,
+                listId: item?._id,
+                price,
+                date: new Date()
+            }
+            console.log( payment ) ;
+            axiosSecure.post('/payments', payment)
+            .then(res => {
+                if(res.data){
+                    console.log('hoise')
+                }
+            })
         }
     }
     return (

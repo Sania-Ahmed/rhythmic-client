@@ -7,14 +7,15 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Single = ({single}) => {
-    const{name, image ,instructor, available_seats, price, _id   } = single
+    const{name, image ,instructor, available_seats, price, _id , students  } = single
     const location = useLocation() ;
     const navigate = useNavigate() ;
     const {user} = useContext(AuthContext) ;
     const handleAddToList = (single) => {
       if(user && user.email) {
         const selectedItem = {
-            itemId: _id, name , image , available_seats, instructor, price, email : user.email
+            itemId: _id, name , image , available_seats, instructor, price, email : user.email ,
+            students, enrolled: false 
         }
         fetch('http://localhost:5000/lists', {
             method: 'POST',
