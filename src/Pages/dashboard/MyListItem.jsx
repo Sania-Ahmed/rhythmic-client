@@ -11,7 +11,7 @@ const MyListItem = ({item}) => {
     const handleDelete = (id) => {
         const process = confirm('are you sure you want to delete? ') ;
         if(process) {
-            fetch(`http://localhost:5000/lists/${id}`, {
+            fetch(`https://rhythmic-server-sania-ahmed.vercel.app/lists/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

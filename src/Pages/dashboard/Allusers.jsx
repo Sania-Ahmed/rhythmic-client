@@ -11,7 +11,7 @@ const Allusers = () => {
     })
 
     const handleMakeAdmin = (id) => {
-    fetch(`http://localhost:5000/users/admin/${id}`, {
+    fetch(`https://rhythmic-server-sania-ahmed.vercel.app/users/admin/${id}`, {
         method: 'PATCH',
     })
     .then(res => res.json())
@@ -24,7 +24,7 @@ const Allusers = () => {
     }
 
     const handleMakeInstructor = (id) => {
-        fetch(`http://localhost:5000/users/instructor/${id}`, {
+        fetch(`https://rhythmic-server-sania-ahmed.vercel.app/users/instructor/${id}`, {
             method: 'PATCH',
         })
         .then(res => res.json())

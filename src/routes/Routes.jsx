@@ -18,6 +18,7 @@ import ManageClasses from "../Pages/dashboard/ManageClasses";
 import Payment from "../Pages/dashboard/Payment";
 import History from "../Pages/dashboard/History";
 import Enorolled from "../Pages/dashboard/Enorolled";
+import FeedBack from "../Pages/dashboard/FeedBack";
 
 
 const router = createBrowserRouter([
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageClasses',
                 element: <ManageClasses></ManageClasses> 
+            },
+            {
+               path: 'feedback',
+               element: <FeedBack></FeedBack>
             },
             {
                 path: 'pay',

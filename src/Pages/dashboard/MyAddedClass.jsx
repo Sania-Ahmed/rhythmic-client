@@ -10,11 +10,12 @@ const MyAddedClass = () => {
     const [addedClass, setAddedClass ] = useState([]) ;
     
   useEffect(() => {
-    fetch(`http://localhost:5000/class/${user.email}`)
+    fetch(`https://rhythmic-server-sania-ahmed.vercel.app/class/${user.email}`)
     .then(res => res.json())
     .then(data => setAddedClass(data) )
   },[user?.email])
 
+  console.log(addedClass)
     return (
         <>
         <Title heading={"MY CLASSES"}></Title>
@@ -31,7 +32,7 @@ const MyAddedClass = () => {
                  <p className="font-semibold text-purple-400 text-lg">${item.price}</p>
                  <p className="font-semibold text-purple-400 text-lg">seats:{item?.available_seats}</p>
                  <p className="font-semibold text-purple-400 text-lg">status:{item?.status}</p>
-                 <p className="font-semibold text-purple-400 text-lg">feedback:{item?.feedback}</p>
+                 <p className="font-semibold text-purple-400 text-lg">feedback:{item?.feedback?.feedback}</p>
                  <p className="font-semibold text-purple-400 text-lg">students:{item?.students}</p>
                </div>
              </div>)

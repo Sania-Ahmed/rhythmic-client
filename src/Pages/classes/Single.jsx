@@ -17,7 +17,7 @@ const Single = ({single}) => {
             itemId: _id, name , image , available_seats, instructor, price, email : user.email ,
             students, enrolled: false 
         }
-        fetch('http://localhost:5000/lists', {
+        fetch('https://rhythmic-server-sania-ahmed.vercel.app/lists', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

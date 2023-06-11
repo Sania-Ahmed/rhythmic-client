@@ -3,7 +3,8 @@ import Wave  from  'react-wavify'
 import './home.css'
 import AboutCard from "../../components/AboutCard";
 import PopularClasses from "./PopularClasses";
-import Instructors from "./Instructors";
+import Allinstructors from "../instructors/Allinstructors";
+
 
 const Home = () => {
     return (
@@ -30,7 +31,8 @@ const Home = () => {
         </div>
         <AboutCard></AboutCard>
         <PopularClasses></PopularClasses>
-        <Instructors></Instructors>
+        <Allinstructors></Allinstructors>
+        
         </>
     );
 };

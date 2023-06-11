@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import Title from "../../shared/Title";
 const Allinstructors = () => {
     const {data: users = [], refetch} = useQuery(['users'], async() => {
-        const res = await fetch('http://localhost:5000/users')
+        const res = await fetch('https://rhythmic-server-sania-ahmed.vercel.app/users')
         return res.json() ;
     })
 

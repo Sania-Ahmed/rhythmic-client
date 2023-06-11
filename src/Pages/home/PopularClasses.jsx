@@ -5,14 +5,15 @@ import useClass from "../../hooks/useClass";
 
 const PopularClasses = () => {
     const [Allclasses] = useClass()
-    console.log(Allclasses);
+    
+    const popular = Allclasses.filter(item => item?.category=== 'popular')
     return (
         <div className="my-10">
             <Title heading={'Popular Classes'}></Title>
             <div className="grid md:grid-cols-2 gap-3">
 
                 {
-                    Allclasses.map(
+                    popular.map(
                         classItem =>
                             <Item key={classItem._id} item={classItem}></Item>
                     )

@@ -20,7 +20,7 @@ const Register = () => {
             .then(() => {
                 setReload(true)
                 const saveUser = {name:data.name, email: data.email, image: data.photoUrl}
-                fetch('http://localhost:5000/users', {
+                fetch('https://rhythmic-server-sania-ahmed.vercel.app/users', {
                   method:'POST',
                   headers: {
                     'content-type':'application/json'
@@ -49,7 +49,7 @@ const Register = () => {
       .then ( result => {
         const loggedUser = result.user ;
         const saveUser = {name:loggedUser.displayName, email: loggedUser.email, image: loggedUser?.photoURL}
-        fetch ('http://localhost:5000/users', {
+        fetch ('https://rhythmic-server-sania-ahmed.vercel.app/users', {
           method:'POST',
           headers: {
             'content-type':'application/json'

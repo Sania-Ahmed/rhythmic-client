@@ -11,7 +11,7 @@ const usePayments = () => {
         queryKey: ['payments'],
         enabled: !loading,
         queryFn: async() => {
-            const res = await fetch(`http://localhost:5000/payments/${user?.email}`);
+            const res = await fetch(`https://rhythmic-server-sania-ahmed.vercel.app/payments/${user?.email}`);
             return res.json();
         }
     })

@@ -5,9 +5,10 @@ import Single from "./Single";
 
 const Classes = () => {
     const [Allclasses] = useClass()
+    console.log(Allclasses) ;
     return (
         <>
-        <Title heading={"Our Classes"}></Title>
+        <Title heading= { "Our Classes"}></Title>
         <div className="grid md:grid-cols-3 mt-16 mb-40 p-10">
             {
                 Allclasses.map( single => <Single

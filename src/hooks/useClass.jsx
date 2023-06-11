@@ -1,16 +1,15 @@
 // import { useEffect, useState } from "react";
 
 import { useQuery } from "@tanstack/react-query";
-import { useContext } from "react";
-import { AuthContext } from "../providers/AuthProviders";
+
 
 
 const useClass = () => {
-    const {loading} = useContext(AuthContext)
+    
     // const [Allclasses, setClasses] = useState([])
     // const [loading, setLoading] = useState(true)
     // useEffect(() => {
-    //     fetch( 'http://localhost:5000/class' )
+    //     fetch( 'https://rhythmic-server-sania-ahmed.vercel.app/class' )
     //         .then(res => res.json())
     //         .then(data => {
     //             setClasses(data)
@@ -21,9 +20,8 @@ const useClass = () => {
 
     const {data: Allclasses = [], isLoading, refetch} = useQuery({
         queryKey: ['class'],
-        enabled: !loading ,
         queryFn: async() => {
-            const res = await fetch('http://localhost:5000/class');
+            const res = await fetch('https://rhythmic-server-sania-ahmed.vercel.app/class');
             return res.json();
         }
     })

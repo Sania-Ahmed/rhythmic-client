@@ -1,15 +1,18 @@
+
+import { useNavigate } from "react-router-dom";
 import useClass from "../../hooks/useClass";
 
 
 const ManageClasses = () => {
     const [Allclasses, isLoading, refetch] = useClass([]) ;
+    const navigate = useNavigate() ;
     
    const manageClass = Allclasses.filter(item => (item.status));
 
    console.log(manageClass)
 
   const handleAprove = (item) => {
-    fetch( `http://localhost:5000/approvedClass/${item._id}`, {
+    fetch( `https://rhythmic-server-sania-ahmed.vercel.app/approvedClass/${item._id}`, {
         method: 'PATCH',
     })
     .then(res => res.json())
@@ -21,7 +24,7 @@ const ManageClasses = () => {
     })
   }
   const handleDeny = (item) => {
-    fetch(`http://localhost:5000/deniedClass/${item._id}`, {
+    fetch(`https://rhythmic-server-sania-ahmed.vercel.app/deniedClass/${item._id}`, {
         method: 'PATCH',
     })
     .then(res => res.json())
@@ -31,6 +34,13 @@ const ManageClasses = () => {
             alert('updated')
         }
     })
+  }
+
+  const handleSendFeedBack = (item) => {
+    navigate('/dashboard/feedback', 
+    {state:{ 
+     item: item
+    }}) ;
   }
 
     return (
@@ -79,7 +89,8 @@ const ManageClasses = () => {
             <td className="flex flex-col gap-1">
              <button onClick={() => handleAprove(item)}  className="btn btn-xs btn-success">APROVE</button>
              <button onClick={() => handleDeny(item)} className="btn btn-xs btn-error">DENY</button>
-             <button  className="btn btn-xs btn-primary">Send Feedback</button>
+             <button
+             onClick={() => handleSendFeedBack (item)}  className="btn btn-xs btn-primary">Send Feedback</button>
             </td>
           </tr>)
            }
