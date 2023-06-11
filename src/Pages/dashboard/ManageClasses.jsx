@@ -9,7 +9,7 @@ const ManageClasses = () => {
    console.log(manageClass)
 
   const handleAprove = (item) => {
-    fetch(`http://localhost:5000/approvedClass/${item._id}`, {
+    fetch( `http://localhost:5000/approvedClass/${item._id}`, {
         method: 'PATCH',
     })
     .then(res => res.json())

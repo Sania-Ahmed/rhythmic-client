@@ -1,8 +1,13 @@
 /* eslint-disable react/prop-types */
 
+import { useNavigate } from "react-router-dom";
+
+
+
 
 // eslint-disable-next-line no-unused-vars
 const MyListItem = ({item}) => {
+  const navigate = useNavigate() ;
     const handleDelete = (id) => {
         const process = confirm('are you sure you want to delete? ') ;
         if(process) {
@@ -17,6 +22,11 @@ const MyListItem = ({item}) => {
             })
         }
     }
+    const handleSendPrice = (price) => {
+         console.log(price)
+             navigate('/dashboard/pay', 
+             {state:{ price : price }}) ;
+    }
     return (
         <tr>
         <th>
@@ -25,7 +35,7 @@ const MyListItem = ({item}) => {
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                < img src={item.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -39,7 +49,8 @@ const MyListItem = ({item}) => {
         <td>${item?.price}</td>
         <th>
           <button onClick={() => handleDelete(item._id)} className="btn btn-ghost btn-xs">delete</button>
-          <button className="btn btn-ghost btn-xs">pay</button>
+          <button onClick={() => handleSendPrice(item?.price)} className="btn btn-ghost btn-xs">pay</button>
+         
         </th>
       </tr>
     );
