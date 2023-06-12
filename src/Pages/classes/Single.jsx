@@ -4,12 +4,16 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { useLocation, useNavigate } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 
 const Single = ({single}) => {
     const{name, image ,instructor, available_seats, price, _id , students  } = single
     const location = useLocation() ;
     const navigate = useNavigate() ;
+    const isAdmin = useAdmin() ;
+    const isInstructor = useInstructor() ;
     const {user} = useContext(AuthContext) ;
     const handleAddToList = (single) => {
       if(user && user.email) {
@@ -38,15 +42,15 @@ const Single = ({single}) => {
     }
     return (
         <div className="border  hover:bg-green-400 bg-base-100">
-             <div className="h-50 w-full">
+             <div className="h-50 w-full p-5">
              <figure> <img src={single.image} className="w-full " alt="Shoes" /></figure>
              </div>
             <div className="card-body">
-                <h2 className="card-title">{single.name}</h2>
-                { single.instructor && <p className="text-purple-400 font-semibold">{single.instructor}</p>}
-                <p className="font-semibold text-lg ">Available seats:{single.available_seats}</p>
+                <h2 className="card-title">{single?.name}</h2>
+                { single?.instructor && <p className="text-purple-400 font-semibold">{single.instructor}</p>}
+                <p className="font-semibold text-lg ">Available seats:{single?.available_seats}</p>
                 <p className="font-semibold text-lg ">price:${single.price}</p>
-                <button onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
+                <button disabled={single?.available_seats === 0 || isAdmin || isInstructor} onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
             </div>
         </div>
     );
