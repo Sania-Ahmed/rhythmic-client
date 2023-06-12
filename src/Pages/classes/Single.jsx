@@ -41,7 +41,8 @@ const Single = ({single}) => {
       }
     }
     return (
-        <div className="border  hover:bg-green-400 bg-base-100">
+        <div className={`border  ${single?.available_seats === "0" ?
+        "bg-red-300 " :"bg-base-100"}`}>
              <div className="h-50 w-full p-5">
              <figure> <img src={single.image} className="w-full " alt="Shoes" /></figure>
              </div>
@@ -50,7 +51,7 @@ const Single = ({single}) => {
                 { single?.instructor && <p className="text-purple-400 font-semibold">{single.instructor}</p>}
                 <p className="font-semibold text-lg ">Available seats:{single?.available_seats}</p>
                 <p className="font-semibold text-lg ">price:${single.price}</p>
-                <button disabled={single?.available_seats === 0 || isAdmin || isInstructor} onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
+                <button disabled={single?.available_seats === "0" || isAdmin || isInstructor} onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
             </div>
         </div>
     );
