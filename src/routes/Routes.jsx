@@ -19,6 +19,7 @@ import Payment from "../Pages/dashboard/Payment";
 import History from "../Pages/dashboard/History";
 import Enorolled from "../Pages/dashboard/Enorolled";
 import FeedBack from "../Pages/dashboard/FeedBack";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -89,13 +90,14 @@ const router = createBrowserRouter([
                 path: 'enrolled' ,
                 element: <Enorolled></Enorolled>
             },
-            {
-                path: '*',
-                element: <h2>Opps, Wrong Cords!</h2>
-            }
+            
 
             
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 ]);
 
