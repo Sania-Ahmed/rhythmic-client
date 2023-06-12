@@ -9,6 +9,7 @@ const Enorolled = () => {
         <table
           className="w-full border"
         >
+             <tbody>
              {
                 
                 AllPayments.map( (i, index) =>
@@ -23,6 +24,7 @@ const Enorolled = () => {
                 </tr>)
 
              }
+             </tbody>
         </table>
            
         </div>

@@ -12,6 +12,7 @@ const History = () => {
         <table
           className="w-full border"
         >
+             <tbody>
              {
                 
                 AllPayments.map( (i, index) =>
@@ -27,6 +28,7 @@ const History = () => {
                 </tr>)
 
              }
+             </tbody>
         </table>
         </div>
     );
