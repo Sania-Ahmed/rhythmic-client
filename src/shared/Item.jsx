@@ -7,6 +7,7 @@ const Item = ({ item }) => {
             <div className="card-body">
                 <h2 className="card-title">{item.name}</h2>
                 {item.instructor && <p className="text-purple-400 font-semibold">{item.instructor}</p>}
+                <p className="text-green-500 font-semibold">students: {item?.students}</p>
             </div>
         </div>
     );
