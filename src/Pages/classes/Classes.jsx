@@ -5,13 +5,14 @@ import Single from "./Single";
 
 const Classes = () => {
     const [Allclasses] = useClass()
-    console.log(Allclasses) ;
+    const approvedClasses = Allclasses.filter(c => c?.status === 'approved')
+    console.log(approvedClasses) ;
     return (
         <>
         <Title heading= { "Our Classes"}></Title>
         <div className="grid md:grid-cols-3 mt-16 mb-40 p-10">
             {
-                Allclasses.map( single => <Single
+                approvedClasses.map( single => <Single
                      key={single._id} single={single} ></Single>)
             }
         </div>
