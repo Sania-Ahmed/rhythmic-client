@@ -20,6 +20,7 @@ import History from "../Pages/dashboard/History";
 import Enorolled from "../Pages/dashboard/Enorolled";
 import FeedBack from "../Pages/dashboard/FeedBack";
 import ErrorPage from "../Pages/ErrorPage";
+import DashHome from "../Pages/dashboard/DashHome";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path: 'dashboard',
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
+            {
+              path: 'dashHome',
+              element: <DashHome></DashHome>
+            },
             {
                 path: 'myList',
                 element: <MyList></MyList>

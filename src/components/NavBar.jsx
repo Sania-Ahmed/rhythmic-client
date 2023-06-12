@@ -24,7 +24,7 @@ const NavBar = ({ handleDarkMode, darkMode }) => {
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/classes"><li>Classes</li></Link>
                         <Link to="/instructors"><li>Instructors</li></Link>
-                        {user && <Link to="/dashboard"><li>Dashboard</li></Link>}
+                        {user && <Link to="/dashboard/dashHome"><li>Dashboard</li></Link>}
                     </ul>
                 </div>
             </div>
