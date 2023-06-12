@@ -88,6 +88,10 @@ const router = createBrowserRouter([
             {
                 path: 'enrolled' ,
                 element: <Enorolled></Enorolled>
+            },
+            {
+                path: '*',
+                element: <h2>Opps, Wrong Cords!</h2>
             }
 
             

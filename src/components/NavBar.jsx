@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 
 const NavBar = ({ handleDarkMode, darkMode }) => {
     const { user,logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleLogout = () => {
         logOut()
-        .then()
+        .then(
+            navigate('/')
+        )
     }
     return (
         <div className="navbar bg-base-100 fixed top-0 z-50">
