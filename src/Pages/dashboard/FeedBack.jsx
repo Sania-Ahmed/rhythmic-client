@@ -27,6 +27,7 @@ const FeedBack = () => {
 
     return (
         <div>
+            <h2 className="text-4xl text-slate-800 font-semibold text-center my-5">Say Why You Have Denied approval !?</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center gap-3">
             <input type="text" name="feedback" placeholder="Your feedback" className="input-primary px-4 py-2 border w-[250px] rounded-md" {...register("feedback", { required: true })} />
             <input type="submit" className="w-[100px] btn btn-primary"/>

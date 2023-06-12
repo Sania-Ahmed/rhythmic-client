@@ -77,12 +77,12 @@ const Allusers = () => {
             </td>
             <td>
             {
-                user.role === 'instructor' ? <p className="font-bold">Instructor</p> : <button onClick={() => handleMakeInstructor(user._id)} className="btn btn-ghost btn-xs">make Instructor</button>
+                user.role === 'instructor' ? <p className="font-bold">Instructor</p> : <button onClick={() => handleMakeInstructor(user._id)} className="btn btn-warning btn-outline btn-sm">make Instructor</button>
               }
             </td>
             <th>
               {
-                user.role === 'admin' ? 'admin' : <button onClick={() => handleMakeAdmin(user._id)} className="btn btn-ghost btn-xs">make admin</button>
+                user.role === 'admin' ? 'admin' : <button  onClick={() => handleMakeAdmin(user._id)} className="btn btn-primary btn-outline btn-sm">make admin</button>
               }
             </th>
           </tr>)

@@ -21,6 +21,8 @@ import Enorolled from "../Pages/dashboard/Enorolled";
 import FeedBack from "../Pages/dashboard/FeedBack";
 import ErrorPage from "../Pages/ErrorPage";
 import DashHome from "../Pages/dashboard/DashHome";
+import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
 
 
 const router = createBrowserRouter([
@@ -61,39 +63,39 @@ const router = createBrowserRouter([
             },
             {
                 path: 'myList',
-                element: <MyList></MyList>
+                element: <PrivateRoute><MyList></MyList></PrivateRoute>
             },
             {
                 path: 'users',
-                element: <Allusers></Allusers>
+                element: <AdminRoute><Allusers></Allusers></AdminRoute>
             },
             {
                 path: 'addClass',
-                element: <AddClass></AddClass>
+                element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
             },
             {
                 path:'myAddedClass',
-                element:<MyAddedClass></MyAddedClass>
+                element:<InstructorRoute><MyAddedClass></MyAddedClass></InstructorRoute>
             },
             {
                 path: 'manageClasses',
-                element: <ManageClasses></ManageClasses> 
+                element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
             },
             {
                path: 'feedback',
-               element: <FeedBack></FeedBack>
+               element: <AdminRoute><FeedBack></FeedBack></AdminRoute>
             },
             {
                 path: 'pay',
-                element: <Payment></Payment>
+                element: <PrivateRoute><Payment></Payment></PrivateRoute>
             },
             {
                path: 'history',
-               element: <History></History>
+               element: <PrivateRoute><History></History></PrivateRoute>
             },
             {
                 path: 'enrolled' ,
-                element: <Enorolled></Enorolled>
+                element: <PrivateRoute><Enorolled></Enorolled></PrivateRoute>
             },
             
 

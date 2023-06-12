@@ -32,7 +32,7 @@ const MyAddedClass = () => {
                  <p className="font-semibold text-purple-400 text-lg">${item.price}</p>
                  <p className="font-semibold text-purple-400 text-lg">seats:{item?.available_seats}</p>
                  <p className="font-semibold text-purple-400 text-lg">status:{item?.status}</p>
-                 <p className="font-semibold text-purple-400 text-lg">feedback:{item?.feedback}</p>
+                {item?.status === 'denied' && <p className="font-semibold text-red-400 text-lg">feedback:{item?.feedback}</p>}
                  <p className="font-semibold text-purple-400 text-lg">students:{item?.students}</p>
                </div>
              </div>)

@@ -14,7 +14,9 @@ const Single = ({single}) => {
     const navigate = useNavigate() ;
     const isAdmin = useAdmin() ;
     const isInstructor = useInstructor() ;
-    console.log(isInstructor)
+
+    console.log(isAdmin)
+    
     const {user} = useContext(AuthContext) ;
     const handleAddToList = (single) => {
       if(user && user.email) {
@@ -52,7 +54,7 @@ const Single = ({single}) => {
                 { single?.instructor && <p className="text-purple-400 font-semibold">{single.instructor}</p>}
                 <p className="font-semibold text-lg ">Available seats:{single?.available_seats}</p>
                 <p className="font-semibold text-lg ">price:${single.price}</p>
-                <button disabled={isAdmin.admin || isInstructor.instructor || single?.available_seats == 0  ? true : false} onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
+                <button disabled={ isAdmin[0]?.admin || isInstructor[0]?.instructor || single?.available_seats == 0 } onClick={() => handleAddToList(single)} className="btn btn-primary">Select</button>
             </div>
         </div>
     );

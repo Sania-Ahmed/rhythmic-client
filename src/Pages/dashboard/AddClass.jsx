@@ -27,7 +27,7 @@ const AddClass = () => {
        console.log(newClass) ;
        axiosSecure.post('/class', newClass) 
        .then( data => {
-           if(data.insertedId){
+           if(data.data.insertedId){
             alert('class added') 
            }
        })
